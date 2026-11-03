@@ -261,10 +261,6 @@ El proceso de filtrado se implementa secuencialmente: (1) eliminar variables con
 
 Es importante considerar que este filtrado no es definitivo, ya que variables eliminadas en esta etapa pueden ser importantes en combinaciones específicas. Además, está basado en relaciones lineales y puede omitir relaciones no lineales importantes. Por tanto, requiere validación posterior del modelo resultante y los umbrales deben ajustarse según el dominio de aplicación específico.
 
-¡Claro! El contenido que tienes es excelente y muy completo. Para hacerlo menos esquemático, lo he reescrito en un formato más narrativo, conectando las ideas en párrafos fluidos. La idea es transformar las listas y tablas en una explicación discursiva, como si lo estuvieras contando en una clase, lo que se adapta mejor al formato de un libro.
-
-Aquí tienes la propuesta:
-
 ## Criterios de Bondad de Ajuste
 
 Una vez completado el filtrado preliminar de variables, nos enfrentamos a una de las tareas más importantes del modelado: seleccionar la combinación óptima de predictores. El objetivo es encontrar un equilibrio delicado. Un modelo con muy pocas variables puede ser demasiado simple y no capturar la relación real (**subajuste** o *underfitting*), mientras que un modelo con demasiadas variables puede ajustarse al ruido de la muestra y no generalizar bien a nuevos datos (**sobreajuste** u *overfitting*).
@@ -432,10 +428,6 @@ El método de selección exhaustiva aplicado al conjunto de datos `mtcars` ident
 Esta aproximación presenta importantes **ventajas**: garantiza encontrar el mejor subconjunto según el criterio elegido (optimalidad garantizada), examina todas las posibles combinaciones de variables ofreciendo una evaluación completa, y proporciona un estándar sólido para comparar otros métodos de selección. Sin embargo, también tiene **limitaciones** significativas: la complejidad computacional crece exponencialmente ya que con $p$ variables se generan $2^p$ modelos posibles, lo que hace que sea impracticable para $p$ grande (típicamente $p > 15-20$). Además, sin una validación cruzada adecuada, puede seleccionar modelos sobreajustados.
 
 Estos métodos son especialmente útiles cuando el número de predictores no es demasiado grande, ya que el esfuerzo computacional crece exponencialmente con el número de variables. Aunque el costo computacional puede ser elevado en datasets amplios, los métodos de selección exhaustiva proporcionan una referencia sólida y transparente para evaluar qué variables son fundamentales en el modelo, siendo particularmente valiosos en estudios donde la interpretabilidad y la certeza sobre la selección de variables son prioritarias.
-
-¡Perfecto! El texto que tienes es una excelente introducción. Ahora vamos a expandir cada uno de esos puntos para darles la profundidad teórica y práctica que necesitan en el libro, explicando el algoritmo de cada método, sus criterios de decisión y sus ventajas y limitaciones.
-
-Aquí tienes una propuesta para desarrollar esa sección.
 
 ## Métodos automáticos paso a paso
 

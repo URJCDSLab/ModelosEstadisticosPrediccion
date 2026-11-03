@@ -72,6 +72,13 @@ ggplot(datos_sim, aes(x = x, y = y)) +
        x = "Variable X", y = "Variable Y") +
   theme_minimal()
 
+datos_sim |> ggplot(aes(x = x, y = y)) +
+  geom_point(alpha = 0.7) +
+  geom_smooth(method = "lm", se = TRUE, color = "red") +
+  labs(title = "Datos Simulados con Relación Lineal",
+       x = "Variable X", y = "Variable Y") +
+  theme_minimal()
+
 # Ajustar el modelo
 modelo_sim <- lm(y ~ x, data = datos_sim)
 
